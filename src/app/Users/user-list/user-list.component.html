@@ -1,0 +1,17 @@
+<div>Users ({{users?.length}})</div>
+<div>
+  <div class="userList header">
+    <div>Firstname</div>
+    <div>Familyname</div>
+    <div>Username</div>
+    <div>Actions</div>
+  </div>
+  <div *ngFor="let user of users" class="userList items">
+    <div>{{user.firstName}}</div>
+    <div>{{user.familyName}}</div>
+    <div>{{user.userName}}</div>
+    <div>
+      <a (click)="view(user)" class="action"><fa name="eye"> </fa> </a>&nbsp; <a (click)="delete(user)" class="action"><fa name="trash"> </fa> </a>
+    </div>
+  </div>
+</div>

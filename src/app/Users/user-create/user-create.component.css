@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 48px auto;
+  align-self: center;
+  padding: 4px;
+  width: 400px;
+}
+
+label {
+  font-weight: bold;
+}
+.names {
+  margin: 4px;
+  border: 1px solid lightgray;
+  background-color: #e1eff4;
+}
+
+.addresses {
+  margin: 4px;
+  border: 1px solid lightgray;
+  background-color: #e1eff4;
+}

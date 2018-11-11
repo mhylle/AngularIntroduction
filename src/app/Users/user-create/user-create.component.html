@@ -1,0 +1,37 @@
+<div>
+  <div class="container names">
+    <div>
+      <div><label>First name</label></div>
+      <div><input type="text" [(ngModel)]="newUser.firstName"></div>
+    </div>
+    <div>
+      <div><label>Family name</label></div>
+      <div><input type="text" [(ngModel)]="newUser.familyName"></div>
+    </div>
+    <div>
+      <div><label>Short name</label></div>
+      <div><input type="text" [(ngModel)]="newUser.userName"></div>
+    </div>
+  </div>
+  <div class="container addresses">
+    <div>
+      <div><label>Street</label></div>
+      <div><input type="text"></div>
+    </div>
+    <div>
+      <div><label>City</label></div>
+      <div><input type="text"></div>
+    </div>
+    <div>
+      <div><label>Zip</label></div>
+      <div><input type="text"></div>
+    </div>
+    <div>
+      <div><label>Country</label></div>
+      <div><input type="text"></div>
+    </div>
+  </div>
+  <div>
+    <button (click)="create()">Create</button>
+  </div>
+</div>

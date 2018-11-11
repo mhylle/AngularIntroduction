@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Martin",
+      "familyName": "Hylleberg",
+      "userName": "mnh",
+      "street": "Tousvej 6a",
+      "city": "Aarhus",
+      "zip": "8230",
+      "country": "Denmark"
+    },
+    {
+      "firstName": "Peter",
+      "familyName": "Petersen",
+      "userName": "pts",
+      "id": 2
+    }
+  ]
+}
