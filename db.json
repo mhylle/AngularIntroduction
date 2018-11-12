@@ -13,8 +13,14 @@
     {
       "firstName": "Peter",
       "familyName": "Petersen",
-      "userName": "pts",
+      "userName": "ped",
       "id": 2
+    },
+    {
+      "firstName": "Peter",
+      "familyName": "Petersen",
+      "userName": "pts",
+      "id": 3
     }
   ]
 }

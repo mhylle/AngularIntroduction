@@ -1,0 +1,18 @@
+<div class="userList header">
+  <div (click)="doSort('firstName')" (mouseenter)="hover='hover'" (mouseleave)="hover = 'unHover'" ngClass="{{hover}}">
+    Firstname
+    <fa name="sort-up" *ngIf="sortDirection==='asc' && sortField==='firstName'"></fa>
+    <fa name="sort-down" *ngIf="sortDirection==='desc'  && sortField==='firstName'"></fa>
+  </div>
+  <div (click)="doSort('familyName')" (mouseenter)="hover='hover'" (mouseleave)="hover = 'unHover'" ngClass="{{hover}}">
+    Familyname
+    <fa name="sort-up" *ngIf="sortDirection==='asc' && sortField==='familyName'"></fa>
+    <fa name="sort-down" *ngIf="sortDirection==='desc'  && sortField==='familyName'"></fa>
+  </div>
+  <div (click)="doSort('userName')" (mouseenter)="hover='hover'" (mouseleave)="hover = 'unHover'" ngClass="{{hover}}">
+    Username
+    <fa name="sort-up" *ngIf="sortDirection==='asc' && sortField==='userName'"></fa>
+    <fa name="sort-down" *ngIf="sortDirection==='desc'  && sortField==='userName'"></fa>
+  </div>
+  <div>Actions</div>
+</div>

@@ -11,6 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
 import { UserSearchComponent } from './Users/user-search/user-search.component';
 import { FooterComponent } from './footer/footer.component';
+import { ListHeaderComponent } from './Users/user-list/list-header/list-header.component';
+import { ListContentComponent } from './Users/user-list/list-content/list-content.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './footer/footer.component';
     UserCreateComponent,
     MenuComponent,
     UserSearchComponent,
-    FooterComponent
+    FooterComponent,
+    ListHeaderComponent,
+    ListContentComponent
   ],
   imports: [
     BrowserModule,

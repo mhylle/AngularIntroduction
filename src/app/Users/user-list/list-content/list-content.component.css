@@ -1,0 +1,24 @@
+.userList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 18px auto;
+  align-self: center;
+  padding: 4px;
+}
+
+.items {
+  border-bottom: 1px solid lightgray;
+}
+
+.action {
+  display: grid;
+  grid-template-columns: repeat(2, 24px);
+}
+
+.action-item {
+
+}
+
+.action-item:hover {
+  cursor: pointer;
+}

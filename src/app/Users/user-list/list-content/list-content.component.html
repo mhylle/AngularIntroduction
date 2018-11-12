@@ -1,0 +1,17 @@
+<div *ngFor="let user of users" class="userList items">
+  <div>{{user.firstName}}</div>
+  <div>{{user.familyName}}</div>
+  <div>{{user.userName}}</div>
+  <div class="action">
+    <div>
+      <a (click)="view(user)" class="action-item">
+        <fa name="eye"></fa>
+      </a>
+    </div>
+    <div>
+      <a (click)="delete(user)" class="action-item">
+        <fa name="trash"></fa>
+      </a>
+    </div>
+  </div>
+</div>

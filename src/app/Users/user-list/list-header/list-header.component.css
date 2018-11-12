@@ -1,0 +1,36 @@
+.header {
+  background-color: #e1eff4;
+  border-bottom: 2px solid #9c9c9c;
+}
+
+.userListHeader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 24px auto;
+  align-self: center;
+  padding: 4px;
+}
+
+.userList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 18px auto;
+  align-self: center;
+  padding: 4px;
+}
+
+.hover {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.unHover {
+  cursor: default;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
