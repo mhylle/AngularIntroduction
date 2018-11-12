@@ -1,46 +1,31 @@
 <div class="searchParameters">
   <div class="searchParameter">
-    <label>Birthdate</label>
-    <div><input type="text" [(ngModel)]="searchModel.birthDate"/></div>
+    <div><label>First name:</label></div>
+    <div class="searchItem"><input type="text" [(ngModel)]="searchModel.firstName"/></div>
   </div>
   <div class="searchParameter">
-    <label>Address</label>
-    <div><input type="text" [(ngModel)]="searchModel.birthDate"/></div>
-  </div>
-  <div class="searchParameter">
-    <div><label>Firstname</label></div>
-    <div><input type="text" [(ngModel)]="searchModel.firstName"/></div>
-  </div>
-  <div class="zipCity">
-    <div><label>Zip and city</label></div>
-    <div><input type="text" [(ngModel)]="searchModel.zipCode"/></div>
-    <div><input type="text" [(ngModel)]="searchModel.city"/></div>
-  </div>
-  <div class="searchParameter">
-    <div><label>Efternavn</label></div>
+    <div><label>Family name:</label></div>
     <div><input type="text" [(ngModel)]="searchModel.familyName"/></div>
-  </div>
-  <div class="searchParameter">
-    <div><label>Department</label></div>
-    <div>
-      TODO
-      <!--<input type="text" [(ngModel)]="searchModel.familyName"/>-->
-    </div>
   </div>
   <div>
     <button (click)="search()">Search</button>
   </div>
 </div>
 
-<div *ngIf="searchResult">
-  <div class="searchHeader header">
-    <div><label>Firstname</label></div>
-    <div><label>Familyname</label></div>
-    <div><label>Username</label></div>
+<div class="searchResult">
+  <div *ngIf="!searchResult" class="noResult">
+    There are currently no results
   </div>
-  <div *ngFor="let user of searchResult" class="searchContainer">
-    <div>{{user.firstName}}</div>
-    <div>{{user.familyName}}</div>
-    <div>{{user.userName}}</div>
+  <div *ngIf="searchResult">
+    <div class="searchHeader header">
+      <div><label>Firstname</label></div>
+      <div><label>Familyname</label></div>
+      <div><label>Username</label></div>
+    </div>
+    <div *ngFor="let user of searchResult" class="searchContainer">
+      <div>{{user.firstName}}</div>
+      <div>{{user.familyName}}</div>
+      <div>{{user.userName}}</div>
+    </div>
   </div>
 </div>

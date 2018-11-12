@@ -1,11 +1,25 @@
 .searchParameters {
-  width: 50%;
+  width: 60%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 4px;
   align-self: start;
+  grid-column-gap: 8px;
 
+}
+
+.searchResult {
+  display: grid;
+  border-top: 1px solid darkgray;
+  margin-top: 8px;
+  align-self: center;
+  /*text-align: center;*/
+}
+
+.noResult {
+  margin-top: 8px;
+  text-align: center;
 }
 
 .searchContainer {
@@ -31,10 +45,14 @@
   grid-template-columns: repeat(2, 1fr);
   align-self: start;
 }
+
+.searchItem {
+  text-align: left;
+}
+
 .zipCity {
   display: grid;
   grid-column-gap: 4px;
   grid-template-columns: repeat(3, 1fr);
   align-self: start;
-
 }
