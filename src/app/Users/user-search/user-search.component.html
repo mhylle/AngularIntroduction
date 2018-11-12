@@ -1,11 +1,11 @@
 <div class="searchParameters">
   <div class="searchParameter">
-    <div><label>First name:</label></div>
-    <div class="searchItem"><input type="text" [(ngModel)]="searchModel.firstName"/></div>
+    <div><label for="firstNameInput">First name:</label></div>
+    <div class="searchItem"><input type="text" [(ngModel)]="searchModel.firstName" id="firstNameInput"/></div>
   </div>
   <div class="searchParameter">
-    <div><label>Family name:</label></div>
-    <div><input type="text" [(ngModel)]="searchModel.familyName"/></div>
+    <div><label for="familyInput">Family name:</label></div>
+    <div><input type="text" [(ngModel)]="searchModel.familyName" id="familyInput"/></div>
   </div>
   <div>
     <button (click)="search()">Search</button>
