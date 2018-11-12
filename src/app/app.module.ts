@@ -9,13 +9,15 @@ import {UserListComponent} from './Users/user-list/user-list.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
+import { UserSearchComponent } from './Users/user-search/user-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserCreateComponent,
-    MenuComponent
+    MenuComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,

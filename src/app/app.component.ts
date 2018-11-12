@@ -29,5 +29,11 @@ export class AppComponent {
     createMenu.icon = 'plus-square';
     createMenu.link = 'Create';
     this.menuItems.push(createMenu);
+
+    const searchMenu = new MenuItem();
+    searchMenu.name = 'Search';
+    searchMenu.icon = 'search';
+    searchMenu.link = 'Search';
+    this.menuItems.push(searchMenu);
   }
 }

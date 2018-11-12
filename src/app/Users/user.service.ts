@@ -1,7 +1,7 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import {User} from './user';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,9 @@ export class UserService {
 
   @Output()
   userDeleted: EventEmitter<User[]> = new EventEmitter<User[]>();
+
+  @Output()
+  usersFound: EventEmitter<User[]> = new EventEmitter<User[]>();
 
   users: User[] = [];
 
@@ -27,6 +30,13 @@ export class UserService {
   getByShortName(shortName: string): User {
     const user = this.users.filter(value => value.userName === shortName);
     return user.length > 0 ? user[0] : null;
+  }
+
+  getByName(firstName: string, familyName: string) {
+    this.getUsers().subscribe((result) => {
+      let users1 = result.filter(value => value.firstName === firstName && value.familyName === familyName);
+      this.usersFound.emit(users1);
+    });
   }
 
   getUsers(): Observable<User[]> {

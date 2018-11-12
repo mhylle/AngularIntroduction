@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {UserCreateComponent} from './Users/user-create/user-create.component';
 import {UserListComponent} from './Users/user-list/user-list.component';
+import {UserSearchComponent} from "./Users/user-search/user-search.component";
 
 const routes: Routes = [
   {
@@ -19,7 +20,13 @@ const routes: Routes = [
     component: UserCreateComponent,
     data: {title: 'Create User'}
   },
-  { path: '',
+  {
+    path: 'Search',
+    component: UserSearchComponent,
+    data: {title: 'Search for User'}
+  },
+  {
+    path: '',
     redirectTo: '/Home',
     pathMatch: 'full'
   }
@@ -29,4 +36,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
