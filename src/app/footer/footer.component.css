@@ -1,0 +1,26 @@
+.footer {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  margin-top: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border: 1px solid lightgray;
+  background-color: #e1eff4;
+}
+
+.copyright {
+  align-self: start;
+}
+
+.info {
+  align-self: center;
+  text-align: center;
+}
+
+.contact {
+  align-self: end;
+}

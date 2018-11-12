@@ -10,6 +10,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
 import { UserSearchComponent } from './Users/user-search/user-search.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserSearchComponent } from './Users/user-search/user-search.component';
     UserListComponent,
     UserCreateComponent,
     MenuComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
