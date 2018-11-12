@@ -6,6 +6,7 @@
   padding: 4px;
   width: 400px;
 }
+
 .userListHeader {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -13,6 +14,7 @@
   align-self: center;
   padding: 4px;
 }
+
 .userList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -30,6 +32,15 @@
   border-bottom: 1px solid lightgray;
 }
 
-.action:hover {
+.action {
+  display: grid;
+  grid-template-columns: repeat(2, 24px);
+}
+
+.action-item {
+
+}
+
+.action-item:hover {
   cursor: pointer;
 }
