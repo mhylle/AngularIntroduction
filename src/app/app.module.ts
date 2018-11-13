@@ -13,6 +13,7 @@ import { UserSearchComponent } from './Users/user-search/user-search.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListHeaderComponent } from './Users/user-list/list-header/list-header.component';
 import { ListContentComponent } from './Users/user-list/list-content/list-content.component';
+import { ContextComponent } from './context/context.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ListContentComponent } from './Users/user-list/list-content/list-conten
     UserSearchComponent,
     FooterComponent,
     ListHeaderComponent,
-    ListContentComponent
+    ListContentComponent,
+    ContextComponent
   ],
   imports: [
     BrowserModule,

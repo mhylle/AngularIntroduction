@@ -14,6 +14,9 @@ export class ListContentComponent implements OnInit {
   @Output()
   delete: EventEmitter<User> = new EventEmitter<User>();
 
+  @Output()
+  view: EventEmitter<User> = new EventEmitter<User>();
+
   constructor() {
   }
 
@@ -21,11 +24,11 @@ export class ListContentComponent implements OnInit {
 
   }
 
-  // view(user: User) {
-  //   // todo
-  // }
+  select(user: User) {
+    this.view.emit(user);
+  }
 
-  delete(user: User) {
+  doDelete(user: User) {
     this.delete.emit(user);
   }
 }

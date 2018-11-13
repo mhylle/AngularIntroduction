@@ -1,4 +1,4 @@
 <div>
   <app-list-header (sort)="onsort($event)" [sortDirection]="sortDirection"></app-list-header>
-  <app-list-content [users]="users" (delete)="onDelete($event)"></app-list-content>
+  <app-list-content [users]="users" (delete)="onDelete($event)" (view)="onShowUser($event)"></app-list-content>
 </div>

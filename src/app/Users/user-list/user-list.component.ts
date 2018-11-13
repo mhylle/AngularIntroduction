@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {UserService} from '../user.service';
 import {User} from '../user';
 
@@ -11,6 +11,8 @@ export class UserListComponent implements OnInit {
 
   users: User[];
   sortDirection = 'asc';
+  @Output()
+  showUser: EventEmitter<User> = new EventEmitter<User>();
 
   constructor(private userService: UserService) {
   }
@@ -48,5 +50,9 @@ export class UserListComponent implements OnInit {
 
   onDelete(user: User) {
     this.userService.deleteUser(user);
+  }
+
+  onShowUser(user: User) {
+    this.showUser.emit(user);
   }
 }
