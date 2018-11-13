@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MenuItem} from './menu/menu-item';
 
 @Component({
@@ -7,8 +7,7 @@ import {MenuItem} from './menu/menu-item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularIntroduction';
-  private menuItems: MenuItem[] = [];
+  menuItems: MenuItem[] = [];
 
 
   constructor() {

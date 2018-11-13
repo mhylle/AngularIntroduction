@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../user.service";
-import {User} from "../user";
-import {SearchModel} from "./search-model";
+import {UserService} from '../user.service';
+import {User} from '../user';
+import {SearchModel} from './search-model';
 
 @Component({
   selector: 'app-user-search',
@@ -21,7 +21,7 @@ export class UserSearchComponent implements OnInit {
       if (result && result.length > 0) {
         this.searchResult = result;
       }
-    })
+    });
   }
 
   search() {
@@ -30,6 +30,5 @@ export class UserSearchComponent implements OnInit {
 
   private doSearch() {
     this.userService.getByName(this.searchModel.firstName, this.searchModel.familyName);
-
   }
 }
