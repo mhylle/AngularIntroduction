@@ -9,10 +9,11 @@ import {User} from '../user';
 })
 export class UserListComponent implements OnInit {
 
-  users: User[];
-  sortDirection = 'asc';
   @Output()
   showUser: EventEmitter<User> = new EventEmitter<User>();
+
+  users: User[];
+  sortDirection = 'asc';
 
   constructor(private userService: UserService) {
   }

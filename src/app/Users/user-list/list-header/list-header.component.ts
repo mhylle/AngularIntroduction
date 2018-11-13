@@ -7,11 +7,12 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class ListHeaderComponent implements OnInit {
 
+  @Input()
+  public sortDirection: string;
+
   @Output()
   sort: EventEmitter<string> = new EventEmitter();
 
-  @Input()
-  sortDirection: string;
   sortField: string;
   hover: string;
 

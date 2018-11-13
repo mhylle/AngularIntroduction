@@ -7,6 +7,9 @@ import {UserCreateComponent} from '../Users/user-create/user-create.component';
 import {UserSearchComponent} from '../Users/user-search/user-search.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {ContextComponent} from '../context/context.component';
+import {ListHeaderComponent} from '../Users/user-list/list-header/list-header.component';
+import {ListContentComponent} from '../Users/user-list/list-content/list-content.component';
+import {FormsModule} from '@angular/forms';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -14,8 +17,14 @@ describe('MenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MenuComponent, UserListComponent, UserCreateComponent, UserSearchComponent, ContextComponent],
-      imports: [AppRoutingModule, AngularFontAwesomeModule]
+      declarations: [MenuComponent,
+        UserListComponent,
+        UserCreateComponent,
+        UserSearchComponent,
+        ContextComponent,
+        ListHeaderComponent,
+        ListContentComponent],
+      imports: [AppRoutingModule, AngularFontAwesomeModule, FormsModule]
     })
       .compileComponents();
   }));
