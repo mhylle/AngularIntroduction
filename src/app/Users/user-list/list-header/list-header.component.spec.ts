@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListHeaderComponent } from './list-header.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 describe('ListHeaderComponent', () => {
   let component: ListHeaderComponent;
@@ -8,7 +9,8 @@ describe('ListHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListHeaderComponent ]
+      declarations: [ ListHeaderComponent ],
+      imports: [AngularFontAwesomeModule]
     })
     .compileComponents();
   }));

@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ListContentComponent } from './list-content.component';
+import {ListContentComponent} from './list-content.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 describe('ListContentComponent', () => {
   let component: ListContentComponent;
@@ -8,9 +9,10 @@ describe('ListContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListContentComponent ]
+      declarations: [ListContentComponent],
+      imports: [AngularFontAwesomeModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
