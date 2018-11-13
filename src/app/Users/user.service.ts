@@ -1,7 +1,7 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import {User} from './user';
 import {HttpClient} from '@angular/common/http';
-import {Observable, Subscription} from 'rxjs';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,21 +22,17 @@ export class UserService {
   constructor(private http: HttpClient) {
   }
 
-  create(user: User) {
-    this.http.post('http://localhost:3000/users', user).subscribe(value => console.log('user added' + value));
-    this.userAdded.emit(this.users);
+  create(user: User): Observable<User> {
+    return this.http.post<User>('http://localhost:3000/users', user);
+
   }
 
-  getByShortName(shortName: string): User {
-    const user = this.users.filter(value => value.userName === shortName);
-    return user.length > 0 ? user[0] : null;
+  getByUserName(userName: string): Observable<User> {
+    return this.http.get<User>('http://localhost:3000/users?userName=' + userName);
   }
 
-  getByName(firstName: string, familyName: string) {
-    this.getUsers().subscribe((result) => {
-      let users1 = result.filter(value => value.firstName === firstName && value.familyName === familyName);
-      this.usersFound.emit(users1);
-    });
+  getByName(firstName: string, familyName: string): Observable<User> {
+    return this.http.get<User>('http://localhost:3000/users?firstName=' + firstName + '&familyName=' + familyName);
   }
 
   getUsers(): Observable<User[]> {
