@@ -29,6 +29,8 @@ export class UserSearchComponent implements OnInit {
   }
 
   private doSearch() {
-    this.userService.getByName(this.searchModel.firstName, this.searchModel.familyName);
+    this.userService.getByName(this.searchModel.firstName, this.searchModel.familyName).subscribe(response => {
+      this.searchResult = response;
+    });
   }
 }

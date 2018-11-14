@@ -31,8 +31,8 @@ export class UserService {
     return this.http.get<User>('http://localhost:3000/users?userName=' + userName);
   }
 
-  getByName(firstName: string, familyName: string): Observable<User> {
-    return this.http.get<User>('http://localhost:3000/users?firstName=' + firstName + '&familyName=' + familyName);
+  getByName(firstName: string, familyName: string): Observable<User[]> {
+    return this.http.get<User[]>('http://localhost:3000/users?firstName=' + firstName + '&familyName=' + familyName);
   }
 
   getUsers(): Observable<User[]> {

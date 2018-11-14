@@ -2,6 +2,8 @@ import {TestBed} from '@angular/core/testing';
 
 import {UserService} from './user.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import {ResponseOptions} from "@angular/http";
+import {User} from "./user";
 
 describe('UserService', () => {
   let service: UserService;
@@ -67,4 +69,23 @@ describe('UserService', () => {
     });
     httpMock.verify();
   });
+
+  // it('should be able to create a user', () => {
+  //   const responseForm = '<form />';
+  //   let newUser = new User();
+  //   newUser.firstName = 'Jan';
+  //   newUser.familyName = 'Testerson';
+  //   newUser.userName = 'jte';
+  //   newUser.id = 123;
+  //   let userCreateResponse;
+  //   service.create(newUser).subscribe(response => {
+  //     userCreateResponse = response;
+  //     console.log(response);
+  //   });
+  //   httpMock.expectOne({
+  //     url: 'http://localhost:3000/users',
+  //     method: 'POST'
+  //   }).flush(responseForm);
+  //   expect(userCreateResponse).toEqual('abc');
+  // })
 });
